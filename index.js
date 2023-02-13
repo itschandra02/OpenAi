@@ -75,7 +75,7 @@ async function run() {
       if (body) {
         if (process.env.API_KEY == "SET_TOKEN_HERE")
           return reply(`Harap set token dahulu pada folder:\n*src/config.js*`);
-        if (body.length < 5) return reply("Minimal 10 karakter!");
+        if (body.length < 5) return reply("Minimal 5 karakter!");
         const openAi = require("./lib/openai.js");
         try {
           const result = await openAi(body);
